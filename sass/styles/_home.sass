@@ -1,0 +1,130 @@
+.home-about
+	position: relative
+
+	&__flex
+		display: flex
+		justify-content: space-between
+		min-height: 550px
+		align-items: flex-end
+		+kvad1(50px, 0)
+		+kvad2(100px, 25px)
+
+	&__link
+		position: relative
+		width: 100%
+		text-decoration: none
+		color: $glavColor
+		font-size: $fs4
+		margin-bottom: 2rem
+		font-family: Josefin Sans
+		font-weight: 600
+		margin-left: 7%
+		&::after
+			position: absolute
+			content: ''
+			width: 6%
+			height: 2px
+			bottom: 5px
+			left: -7%
+			background: $glavColor
+		& span
+			position: relative
+			font-size: 1.4rem
+			left: 10px
+
+	&__title-block
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		width: 50%
+		text-align: left
+
+	&__title
+		color: $textColor
+		font-size: $fs1
+		margin: 0
+		font-family: Josefin Sans
+		font-weight: 700
+		letter-spacing: .7px
+		line-height: 90px
+
+	&__text
+		color: $secColor 
+		font-size: $fs5
+		+aleg(400)
+		letter-spacing: .2px
+		word-spacing: 2px
+		color: $textColor
+		margin-bottom: 3rem
+
+	&__btns
+		position: relative
+		width: 100%
+		display: flex
+		gap: 2.2rem
+
+	&__btn
+		+btn
+		+aleg(400)
+		color: $textColor
+
+		&--now
+			background: $glavColor
+			color: $whiteColor
+
+		&--more
+			background: none
+			&::before
+				transition: .3s
+				position: absolute
+				top: 0
+				left: 50%
+				content: ''
+				width: 0
+				height: 100%
+				background: $glavColor
+				z-index: -1
+			&:hover::before
+				left: 0
+				width: 100%
+			&:hover
+				color: $whiteColor
+				font-weight: bold
+
+	&__img-block
+		position: absolute
+		top: -100px
+		right: 0
+		width: 46%
+		z-index: -1
+		+poin($rig:15px, $bot:0)
+
+	&__img
+		position: relative
+		width: 100%
+		z-index: -1
+		height: 100%
+		&-darkfon
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 99.5%
+			background: #000
+			opacity: .4
+			z-index: 3
+			border-bottom-left-radius: 12%
+
+	&__exer-block
+		position: absolute
+		left: 13%
+		bottom: -235px
+		z-index: -2
+		font-size: 10.1rem
+		color: lighten($glavColor, 39)
+
+	&__exer
+		font-family: Josefin Sans
+		font-weight: 600

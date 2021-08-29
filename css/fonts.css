@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icons/fonts/icomoon.eot?x62isp');
+  src:  url('../fonts/icons/fonts/icomoon.eot?x62isp#iefix') format('embedded-opentype'),
+    url('../fonts/icons/fonts/icomoon.ttf?x62isp') format('truetype'),
+    url('../fonts/icons/fonts/icomoon.woff?x62isp') format('woff'),
+    url('../fonts/icons/fonts/icomoon.svg?x62isp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-body:before {
+  content: "\e900";
+  color: #ff2625;
+}
+.icon-body2:before {
+  content: "\e901";
+  color: #ff2625;
+}
+.icon-face:before {
+  content: "\e902";
+  color: #ff2625;
+}
+.icon-goog:before {
+  content: "\e903";
+  color: #ff2625;
+}
+.icon-in:before {
+  content: "\e904";
+  color: #ff2625;
+}
+.icon-lef:before {
+  content: "\e905";
+}
+.icon-logo .path1:before {
+  content: "\e906";
+  color: rgb(255, 38, 37);
+}
+.icon-logo .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(58, 18, 18);
+}
+.icon-logo .path3:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 38, 37);
+}
+.icon-logo .path4:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 38, 37);
+}
+.icon-medi:before {
+  content: "\e90a";
+  color: #ff2625;
+}
+.icon-rig:before {
+  content: "\e90b";
+  color: #ff2625;
+}
+.icon-sneak:before {
+  content: "\e90c";
+  color: #ff2625;
+}
+.icon-tab:before {
+  content: "\e90d";
+  color: #ff2625;
+}
+.icon-twit:before {
+  content: "\e90e";
+  color: #fff;
+}
+
+/*------------------------------------*/
+
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('../fonts/Abril Fatface/AbrilFatface-Italic.woff2') format('woff2'),
+        url('../fonts/Abril Fatface/AbrilFatface-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/Alegreya/Alegreya-Bold.woff2') format('woff2'),
+        url('../fonts/Alegreya/Alegreya-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('../fonts/Alegreya/Alegreya-Regular.woff2') format('woff2'),
+        url('../fonts/Alegreya/Alegreya-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('../fonts/Circular Std/CircularStd-Book.woff2') format('woff2'),
+        url('../fonts/Circular Std/CircularStd-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/Josefin_Sans/JosefinSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-Bold.woff2') format('woff2'),
+        url('../fonts/Josefin_Sans/JosefinSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/Josefin_Sans/JosefinSans-Italic.woff2') format('woff2'),
+        url('../fonts/Josefin_Sans/JosefinSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+

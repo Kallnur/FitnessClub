@@ -1,0 +1,74 @@
+=aleg($wei)
+	font-family: Alegreya
+	font-weight: $wei
+
+=btn 
+	position: relative
+	padding: .7rem 0
+	text-align: center
+	width: 180px
+	text-decoration: none
+	font-size: $fs5
+	border: 1px solid $glavColor
+	border-radius: 25px
+	background: $glavColor
+	&:hover
+		box-shadow: 0 2px 6px $glavColor
+
+=kvad1($top, $left)
+	&::before
+		position: absolute
+		top: $top
+		left: $left
+		content: ''
+		width: 90px
+		height: 120px
+		background: $glavColor
+		opacity: .04
+
+=kvad2($top, $left)
+	&::after
+		position: absolute
+		top: $top
+		left: $left
+		content: ''
+		width: 80px
+		height: 170px
+		background: $glavColor
+		opacity: .04
+
+=poin($top:null, $rig:null, $bot:null, $left:null)
+	&::before
+		position: absolute
+		content: ''
+		width: 110px
+		height: 122px
+		right: $rig
+		bottom: $bot
+		top: $top
+		left: $left
+		transform: translateY(40%)
+		background: repeating-radial-gradient($glavColor, $glavColor 1.5px, transparent 3px, transparent 100%)
+		background-size: 14px 14px
+		z-index: 1
+		opacity: .77
+
+=hover-line
+	&::before
+		content: ''
+		position: absolute
+		top: 100%
+		left: 50%
+		width: 0
+		height: 2px
+		background: $glavColor
+		transition: .2s
+	&:hover
+		color: $textColor
+	&:hover::before
+		left: 0
+		width: 100%
+
+=media($px)
+	@media screen and (max-width: $px)
+		@content
