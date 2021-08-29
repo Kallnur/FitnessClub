@@ -436,6 +436,7 @@ html {
   }
 
   .home-about__flex {
+    min-height: 380px;
     align-items: flex-start;
   }
   .home-about__title {
