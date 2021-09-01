@@ -1,0 +1,102 @@
+.services
+	position: relative
+	padding-top: 10rem
+	padding-bottom: 3rem
+
+	&__title-block
+		width: 50%
+		margin: 0 auto
+		text-align: center
+
+	&__title
+		color: $glavColor
+		font-size: $fs4
+
+	&__subtitle
+		color: $textColor
+		font-size: $fs2v
+		margin-bottom: 3rem
+
+	&__list
+		position: relative
+		width: 100%
+		height: 200px
+		padding: 0
+		list-style: none
+		display: flex
+		justify-content: space-between
+		gap: .5rem
+
+	&__item
+		position: relative
+		box-sizing: border-box
+		width: 20%
+		height: 180px
+		background: $whiteColor
+		padding: 2rem .7rem
+		border: 1px solid #F7F7F7
+		display: flex
+		flex-direction: column
+		text-align: center
+		align-items: center
+		box-shadow: 0 0 8px rgba($glavColor, .1)
+		border-radius: 5px
+		overflow: hidden
+		transition: .3s
+		cursor: pointer
+		opacity: .85
+		transform: scale(.99)
+		&:hover
+			box-shadow: 0 0 10px rgba($glavColor, .3)
+			opacity: 1
+			transform: scale(1)
+
+	&__icon
+		font-size: 3rem
+
+	&__deta
+		width: 50%
+		margin: 1.6rem 0 2rem 0
+		color: $textColor
+
+	&__link
+		position: absolute
+		transform: translateY(150px)
+		text-decoration: none
+		color: $glavColor
+
+	&__slide-block
+		display: flex
+		justify-content: flex-end
+
+	&__slide-btns
+		display: flex
+		align-items: center
+		gap: .5rem
+
+	&__slide
+		cursor: pointer
+		opacity: .7
+		transition: .3s
+
+	&__slide--prev
+		font-size: $fs6
+		color: $secColor
+		&:hover
+			opacity: 1
+			transform: translateX(-8px)
+			color: $textColor
+			font-size: $fs5
+
+	&__slide--next
+		font-size: $fs3
+		color: $glavColor
+		&:hover
+			opacity: 1
+			transform: translateX(8px)
+
+.itemHeight
+	height: 220px
+	box-shadow: 0 0 10px rgba($glavColor, .3)
+	opacity: 1
+	transform: scale(1)

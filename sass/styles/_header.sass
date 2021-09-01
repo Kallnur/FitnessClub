@@ -16,7 +16,13 @@ html
 	transition: .3s
 	
 .header
-	padding: 1.5rem 0 1.5rem 0
+	padding: 1.2rem 0 1.5rem 0
+	position: fixed
+	width: 100%
+	background: rgba(#FFFAFB, 0)
+	box-shadow: 0 1px 3px rgba($glavColor, 0)
+	transition: .3s
+	z-index: 5
 
 	&__flex
 		display: flex
@@ -43,10 +49,13 @@ html
 		text-decoration: none
 		color: $secColor
 		+aleg(normal)
-		+hover-line		
+		+hover-line	
+		z-index: 10
 
 .darkfon
 		position: fixed
+		top: 0
+		left: 0
 		width: 100%
 		height: 100%
 		background: #000
@@ -65,7 +74,7 @@ html
 	box-shadow: -1px 1px 5px rgba(#6EDDFF, .8)
 	top: 0
 	right: 0
-	z-index: 8
+	z-index: 10
 	transform: translateX(105%)
 	transition: .4s
 
