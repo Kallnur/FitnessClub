@@ -35,46 +35,96 @@ $(function(){
 
     if(top < 105){
       header.css({
-      'background': 'rgba(255, 250, 251, '+top/100+')',
+      'background': 'rgba(255, 250, 251, '+top/105+')',
       'box-shadow': '0 1px 3px rgba(255, 38, 37, '+top/100+')',
-      'transform': 'translateY(-'+top+'px)'
-      });
+      'transform': 'translateY(-'+top/10+'px)'
+      })
     }
-
   });
 
   //  Services slide
 
   let serviceItem = $('.services__item'),
+      itemBlock   = $('.services__item-block'),
+      serviceList = $('.services__list'),
       serviceNext = $('.services__slide--next'),
-      servicePrev = $('.services__slide--prev');
+      servicePrev = $('.services__slide--prev'),
+      slide       = 0,
+      slideP      = 0;
 
 
-  serviceItem.on('click', function(){
-    $(serviceItem).removeClass('itemHeight');
+  itemBlock.on('click', function(){
+    $(itemBlock).removeClass('itemHeight');
     $(this).toggleClass('itemHeight');
   });
 
   serviceNext.on('click', () => {
-    let actItem = $('.itemHeight'),
-        itemI = actItem.index();
+    if(window.innerWidth > 768){
+      let actItem = $('.serviceItem'),
+          itemI = actItem.index();
 
-    actItem.removeClass('itemHeight');
-    let nextI = itemI += 1;
-    if(nextI > serviceItem.length - 1){nextI = 0}
-    $(serviceItem[nextI]).addClass('itemHeight');
-    console.log(nextI)
+      actItem.removeClass('serviceItem');
+      itemBlock.removeClass('itemHeight');
+      if(itemI >= serviceItem.length - 1){itemI = 0}
+        else{itemI += 1}
+      $(serviceItem[itemI]).addClass('serviceItem');
+      $('.serviceItem').children().addClass('itemHeight');
+    }
+    else if(window.innerWidth <= 768){
+      let slideSize = serviceItem.css('width');
+      slide += parseInt(slideSize);
+      serviceList.css('transform', `translateX(-${slide}px)`);
+      let parseEn = parseInt(slideSize)
+      if(slide > parseEn * serviceItem.length - 2){
+        slide = 0
+        serviceList.css('transform', `translateX(-${slide}px)`);
+      }
+
+      $(window).on('resize',()=>{
+        if(window.innerWidth > 768){
+          serviceList.css('transform', `translateX(0)`);
+          slide = 0;
+        }
+      })
+      console.log(slide);
+    }
   })
 
   servicePrev.on('click', () => {
-    let actItem = $('.itemHeight'),
-        itemI = actItem.index();
-    
-    actItem.removeClass('itemHeight');
-    let nextI = itemI -= 1;
-    if(nextI < 0){nextI = serviceItem.length - 1}
-    $(serviceItem[nextI]).addClass('itemHeight');
-    console.log(nextI)
+    if(window.innerWidth > 768){
+      let actItem = $('.serviceItem'),
+      itemI = actItem.index();
+
+      actItem.removeClass('serviceItem');
+      itemBlock.removeClass('itemHeight');
+      if(itemI <= 0){itemI = serviceItem.length - 1}
+        else{itemI -= 1}
+      $(serviceItem[itemI]).addClass('serviceItem');
+      $('.serviceItem').children().addClass('itemHeight');
+    }
+    else if(window.innerWidth <= 768){
+      let slideSize = serviceItem.css('width'), slidePrev = 0;
+      let parseEn = parseInt(slideSize);
+          slidePrev += parseEn;
+
+      slide -= slidePrev;
+      if(slide < 0){
+        slide = parseEn * (serviceItem.length - 1);
+        serviceList.css('transform', `translateX(-${slide}px)`);
+      }
+      serviceList.css('transform', `translateX(-${slide}px)`);
+
+      $(window).on('resize',()=>{
+        if(window.innerWidth > 768){
+          serviceList.css('transform', `translateX(0)`);
+          slide = 0;
+        }
+      })
+    }
+  
   })
+
+  
+
 
 });

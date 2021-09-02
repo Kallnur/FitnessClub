@@ -11,11 +11,13 @@
 	&__title
 		color: $glavColor
 		font-size: $fs4
+		+jose(600)
 
 	&__subtitle
 		color: $textColor
 		font-size: $fs2v
 		margin-bottom: 3rem
+		+jose(700)
 
 	&__list
 		position: relative
@@ -24,13 +26,21 @@
 		padding: 0
 		list-style: none
 		display: flex
+		flex-direction: row
+		flex-wrap: wrap
 		justify-content: space-between
 		gap: .5rem
 
 	&__item
 		position: relative
+		width: 22%
+		height: 220px
+		margin-bottom: 2rem
+
+	&__item-block
+		position: relative
 		box-sizing: border-box
-		width: 20%
+		width: 100%
 		height: 180px
 		background: $whiteColor
 		padding: 2rem .7rem
@@ -41,6 +51,7 @@
 		align-items: center
 		box-shadow: 0 0 8px rgba($glavColor, .1)
 		border-radius: 5px
+		border-bottom-left-radius: 10%
 		overflow: hidden
 		transition: .3s
 		cursor: pointer
@@ -58,12 +69,14 @@
 		width: 50%
 		margin: 1.6rem 0 2rem 0
 		color: $textColor
+		+aleg(700)
 
 	&__link
 		position: absolute
 		transform: translateY(150px)
 		text-decoration: none
 		color: $glavColor
+		+aleg(400)
 
 	&__slide-block
 		display: flex
