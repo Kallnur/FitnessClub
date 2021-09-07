@@ -53,13 +53,22 @@ $(function(){
       slideP      = 0;
 
 
-  itemBlock.on('click', function(){
+  itemBlock.on('click', function(){  //  active для слайдера, для мониторов
     $(itemBlock).removeClass('itemHeight');
     $(this).toggleClass('itemHeight');
   });
 
-  serviceNext.on('click', () => {
-    if(window.innerWidth > 768){
+  function nullStyleSlide(){  //  сброс сдвига слайда при изминения ширины окна
+    $(window).on('resize',()=>{
+      if(window.innerWidth > 768){
+        serviceList.css('transform', `translateX(0)`);
+        slide = 0;
+      }
+    })
+  }
+
+  serviceNext.on('click', () => {  //  слайдер адаптив
+    if(window.innerWidth > 768){  //  active для кнопок слайдера, для мониторов
       let actItem = $('.serviceItem'),
           itemI = actItem.index();
 
@@ -68,30 +77,25 @@ $(function(){
       if(itemI >= serviceItem.length - 1){itemI = 0}
         else{itemI += 1}
       $(serviceItem[itemI]).addClass('serviceItem');
-      $('.serviceItem').children().addClass('itemHeight');
+      $('.serviceItem').children().addClass('itemHeight');  //  переход
     }
-    else if(window.innerWidth <= 768){
-      let slideSize = serviceItem.css('width');
+    else if(window.innerWidth <= 768){  //  слайдер для мобил
+      let slideSize = serviceItem.css('width');  //  размер шага
       slide += parseInt(slideSize);
-      serviceList.css('transform', `translateX(-${slide}px)`);
+      serviceList.css('transform', `translateX(-${slide}px)`);  //  слайд
       let parseEn = parseInt(slideSize)
-      if(slide > parseEn * serviceItem.length - 2){
+      if(slide > parseEn * serviceItem.length - 2){  //  вазврат на контр. точку
         slide = 0
         serviceList.css('transform', `translateX(-${slide}px)`);
       }
 
-      $(window).on('resize',()=>{
-        if(window.innerWidth > 768){
-          serviceList.css('transform', `translateX(0)`);
-          slide = 0;
-        }
-      })
+      nullStyleSlide();
       console.log(slide);
     }
   })
 
   servicePrev.on('click', () => {
-    if(window.innerWidth > 768){
+    if(window.innerWidth > 768){  //  active для кнопок слайдера, для мониторов
       let actItem = $('.serviceItem'),
       itemI = actItem.index();
 
@@ -100,31 +104,23 @@ $(function(){
       if(itemI <= 0){itemI = serviceItem.length - 1}
         else{itemI -= 1}
       $(serviceItem[itemI]).addClass('serviceItem');
-      $('.serviceItem').children().addClass('itemHeight');
+      $('.serviceItem').children().addClass('itemHeight');  //  переход
     }
-    else if(window.innerWidth <= 768){
+    else if(window.innerWidth <= 768){  //  слайдер для мобил
       let slideSize = serviceItem.css('width'), slidePrev = 0;
       let parseEn = parseInt(slideSize);
           slidePrev += parseEn;
 
-      slide -= slidePrev;
+      slide -= slidePrev;    //  размер шага
       if(slide < 0){
         slide = parseEn * (serviceItem.length - 1);
-        serviceList.css('transform', `translateX(-${slide}px)`);
+        serviceList.css('transform', `translateX(-${slide}px)`);  //  вазврат на контр. точку
       }
-      serviceList.css('transform', `translateX(-${slide}px)`);
+      serviceList.css('transform', `translateX(-${slide}px)`);  //  слайд
 
-      $(window).on('resize',()=>{
-        if(window.innerWidth > 768){
-          serviceList.css('transform', `translateX(0)`);
-          slide = 0;
-        }
-      })
+      nullStyleSlide();
     }
   
   })
-
-  
-
 
 });

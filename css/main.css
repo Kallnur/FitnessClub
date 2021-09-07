@@ -13,10 +13,40 @@ html {
   margin: 0 auto;
 }
 
+.minTitle {
+  color: #FF2625;
+  font-size: 1.5rem;
+  font-family: Josefin Sans;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #3A1212;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: Josefin Sans;
+  font-weight: 700;
+}
+
 .btn {
   overflow: hidden;
   z-index: 2;
   transition: 0.3s;
+}
+
+.button {
+  position: relative;
+  padding: 0.7rem 0;
+  text-align: center;
+  min-width: 180px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 1px solid #FF2625;
+  border-radius: 25px;
+  background: #FF2625;
+}
+.button:hover {
+  box-shadow: 0 2px 6px #FF2625;
 }
 
 .header {
@@ -253,21 +283,9 @@ html {
   gap: 2.2rem;
 }
 .home-about__btn {
-  position: relative;
-  padding: 0.7rem 0;
-  text-align: center;
-  width: 180px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border: 1px solid #FF2625;
-  border-radius: 25px;
-  background: #FF2625;
   font-family: Alegreya;
   font-weight: 400;
   color: #3A1212;
-}
-.home-about__btn:hover {
-  box-shadow: 0 2px 6px #FF2625;
 }
 .home-about__btn--now {
   background: #FF2625;
@@ -469,6 +487,59 @@ html {
   box-shadow: 0 0 10px rgba(255, 38, 37, 0.3);
   opacity: 1;
   transform: scale(1);
+}
+
+.descrip {
+  position: relative;
+}
+.descrip__list {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+.descrip__item {
+  width: 100%;
+  display: flex;
+}
+.descrip__img-block {
+  position: relative;
+  width: 50%;
+  border-bottom-right-radius: 17%;
+}
+.descrip__img {
+  width: 100%;
+  object-fit: cover;
+}
+.descrip__info-block {
+  box-sizing: border-box;
+  width: 50%;
+  text-align: left;
+  padding: 7rem 0 8rem 5.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.descrip__subtitle {
+  margin: 0 0 1.7rem 0;
+}
+.descrip__info-text {
+  color: #8F7E7E;
+  line-height: 33px;
+  font-size: 1.2rem;
+  margin: 0 0 3rem 0;
+  font-family: Alegreya;
+  font-weight: 400;
+}
+.descrip__btn {
+  display: inline-block;
+  color: #fff;
+  font-family: Alegreya;
+  font-weight: 700;
+  width: 180px;
 }
 
 @media screen and (max-width: 1130px) {
