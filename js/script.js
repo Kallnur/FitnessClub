@@ -215,7 +215,7 @@ $(function(){
     //$(window).scrollTop(top);
 
     $('html, body').animate({
-      scrollTop: sTop
+      scrollTop: $(sTop).offset().top + 70
     });
     $('.redline').removeClass('redline')
   }
@@ -223,36 +223,38 @@ $(function(){
 
   liHome.on('click', function(event){
     event.preventDefault();
-    autoScrool(0);
+    autoScrool($('.home-about'));
     $(this).addClass('redline');
   })
 
   liTraining.on('click', function(event){
     event.preventDefault();
-    autoScrool(900);
+    autoScrool($('.services'));
     $(this).addClass('redline');
   })
 
   liContact.on('click', function(event){
     event.preventDefault();
-    autoScrool(4350);
+    autoScrool($('.contact'));
     $(this).addClass('redline');
   })
 
   $(window).on('scroll', function(event){
-    let scorll = $(window).scrollTop();
+    let scorll     = $(window).scrollTop();
+    let sericesTop = $('.services').offset().top;
+    let mentorTop  = $('.mentor').offset().top;
+    let contactTop = $('.contact').offset().top;
 
-    if(scorll >= 0 && scorll < 800){
+    if(scorll >= 0 && scorll < sericesTop){
       $('.redline').removeClass('redline')
       liHome.addClass('redline');
     };
-    if(scorll >= 800 && scorll < 1500){
+    if(scorll >= sericesTop && scorll < mentorTop){
       $('.redline').removeClass('redline')
       liTraining.addClass('redline');
     };
-    if(scorll > 2222 && scorll < 3333){$('.redline').removeClass('redline')}
 
-    if(scorll >= 4350 && scorll < 4900){
+    if(scorll > contactTop){
       $('.redline').removeClass('redline')
       liContact.addClass('redline');
     }
