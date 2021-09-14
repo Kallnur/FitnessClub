@@ -1,0 +1,87 @@
+.comment
+	position: relative
+	padding-top: 5.5rem
+	padding-bottom: 3rem
+	+kvad1($top: 5.8rem, $rig: 0)
+	+kvad2($top: 9.5rem, $rig: 35px)
+
+	&__body
+		position: relative
+		width: 100%
+		display: flex
+
+	&__img-block
+		position: relative
+		width: 45%
+
+	&__title-block
+		position: relative
+		width: 55%
+		box-sizing: border-box
+		padding-left: 5rem
+		text-align: left
+		+poin($bot: 0, $rig: 0)
+		&::before
+			transform: translateY(0)
+
+	&__title
+		margin-top: .5rem
+
+	&__subtitle
+		width: 400px
+
+	&__img
+		position: relative
+		width: 100%
+
+	&__comment-block
+		position: absolute
+		width: 55%
+		height: 340px
+		bottom: 2.5rem
+		right: 4rem
+		box-sizing: border-box
+		padding: 2.5rem
+		background: $whiteColor
+		border-radius: 3px
+		border-top-right-radius: 17%
+		box-shadow: 0 22px 50px rgba($glavColor, .1)
+		z-index: 3
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+	&__text
+		+jose(400)
+		font-style: italic
+		color: $textColor
+		line-height: 30px
+		font-size: $fs5v
+		letter-spacing: .5px
+
+	&__info-block
+		display: flex
+		flex-direction: column
+
+	&__name
+		+jose(700)
+		font-size: $fs5
+		color: $textColor
+		line-height: 30px
+
+	&__geo
+		+jose(400)
+		font-size: $fs7
+		color: $secColor
+		line-height: 20px
+
+	&__btns
+		position: absolute
+		bottom: 2.5rem
+		right: 3rem
+
+	&__slide-btns
+		margin: 0
+	&__slide
+		&:nth-child(1)
+			transform: translateY(-1px)

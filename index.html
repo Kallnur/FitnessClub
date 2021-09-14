@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/burger.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -20,15 +21,15 @@
 				<nav class="header__nav">
 					<ul class="header__navbar navbar">
 						<li class="navbar__item">
-							<a href="#" class="navbar__link">Home</a>
+							<a href="#" class="navbar__link link-home">Home</a>
 						</li>
 
 						<li class="navbar__item">
-							<a href="#" class="navbar__link">Training</a>
+							<a href="#" class="navbar__link link-training">Training</a>
 						</li>
 
 						<li class="navbar__item">
-							<a href="#" class="navbar__link">Contact</a>
+							<a href="#" class="navbar__link link-contact">Contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -63,6 +64,11 @@
 							<a href="#" class="med-nav__link">Contact</a>
 						</li>
 					</ul>
+
+					<div class="select-fon">
+						<span class="select-color select-color--li">Light</span>
+						<span class="select-color select-color--da">Dark</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -142,20 +148,19 @@
 				</ul>
 			</div>
 			<div class="services__slide-block">
-				<p class="services__slide-btns">
-					<span class="services__slide services__slide--prev icon-lef"></span>
-					<span class="services__slide services__slide--next icon-rig"></span>
+				<p class="services__slide-btns slide-body">
+					<span class="services__slide services__slide--prev btn1 slide-btn slide-prev icon-lef"></span>
+					<span class="services__slide services__slide--next btn2 slide-btn slide-next icon-rig"></span>
 				</p>
 			</div>
 		</div>
-
 	</section>
 
 	<section class="descrip">
 		<div class="container">
 			<ul class="descrip__list">
 				<li class="descrip__item">
-					<div class="descrip__img-block">
+					<div class="descrip__img-block descrip__img-block--orig">
 						<img src="img/sec1.png" alt="" class="descrip__img">
 					</div>
 					<div class="descrip__info-block">
@@ -172,28 +177,190 @@
 					</div>
 				</li>
 
-				<li class="descrip__item">
-					<div class="descrip__info-block">
-						<h3 class="descrip__title minTitle">Health Benefits</h3>
-						<h2 class="descrip__subtitle subtitle">
-							Physical Exercise Gives Your Body The Wings
+				<li class="descrip__item descrip__item--reap">
+					<div class="descrip__info-block descrip__info-block--reap">
+						<h3 class="descrip__title descrip__title--reap minTitle">Improve Moods</h3>
+						<h2 class="descrip__subtitle descrip__subtitle--reap subtitle">
+							Makes You More Active And Improve Moods
 						</h2>
 						<p class="descrip__info-text">
-							Physical activity and exercise can have immediate and long-term health 
-							benefits. Most importantly, regular activity can improve your quality 
-							of life.Exercise can improve your health and reduce the risk of
+							Physical activity and exercise can have immediate and long-term health benefits. Most importantly, regular activity can improve your quality of life.Exercise can improve your health and reduce the risk of 
 						</p>
 						<a href="#" class="descrip__btn button">Learn more</a>
 					</div>
-					<div class="descrip__img-block">
-						<img src="img/sec2.png" alt="" class="descrip__img">
+					<div class="descrip__img-block descrip__img-block--reap">
+						<img src="img/sec2.png" alt="" class="descrip__img descrip__img--reap">
 					</div>
 				</li>
 			</ul>
 		</div>
 	</section>
 
+	<main class="mentor-rev">
+		<section class="mentor">
+			<div class="container">
+				<div class="mentor__title-block">
+					<h3 class="mentor__title minTitle">Our Instructors</h3>
+					<p class="mentor__subtitle subtitle">
+						Meet Our Extreamly Talented Trainers
+					</p>
+				</div>
+				<div class="mentor__list-block">
+					<div class="mentor__swiper swiper mySwiper">
+						<ul class="mentor__list swiper-wrapper">
+							<li class="mentor__item swiper-slide">
+								<div class="mentor__img-block">
+									<img src="img/tre1.png" alt="Jason Holder" class="mentor__img">
+								</div>
+								<div class="mentor__info-block">
+									<strong class="mentor__name">Jason Holder</strong>
+									<p class="mentor__skill">Cardio Expert</p>
+								</div>
+							</li>
+							<li class="mentor__item swiper-slide">
+								<div class="mentor__img-block">
+									<img src="img/tre2.png" alt="Monica Sellesa" class="mentor__img">
+								</div>
+								<div class="mentor__info-block">
+									<strong class="mentor__name">Monica Sellesa</strong>
+									<p class="mentor__skill">Nutrition Expert</p>
+								</div>
+							</li>
+							<li class="mentor__item swiper-slide">
+								<div class="mentor__img-block">
+									<img src="img/tre3.png" alt="Jhonson Russoe" class="mentor__img">
+								</div>
+								<div class="mentor__info-block">
+									<strong class="mentor__name">Jhonson Russoe</strong>
+									<p class="mentor__skill">Meditation Expert</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="comment">
+			<div class="container">
+				<div class="comment__body">
+					<div class="comment__img-block">
+						<img src="img/sec3.png" class="comment__img">
+					</div>
+					<div class="comment__title-block">
+						<h3 class="comment__title minTitle">Testimonial</h3>
+						<h2 class="comment__subtitle subtitle">
+							That’s What Our Super Client Says
+						</h2>
+					</div>
+					<div class="comment__comment-block">
+						<p class="comment__text">
+							“Gale is an amazing trainer as well as a great person. She is so flexible when it comes
+							to my crazy work schedule and makes sure to always fit me in. Every day she pushes me 
+							harder towards my goals.”
+						</p>
+						<div class="comment__info-block">
+							<strong class="comment__name">Jessica Parker</strong>
+							<small class="comment__geo">Mariland,USA</small>
+						</div>
+						
+						<div class="comment__btns">
+							<p class="comment__slide-btns slide-body">
+								<span class="comment__slide slide-btn slide-prev icon-lef"></span>
+								<span class="comment__slide slide-btn slide-next icon-rig"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+		</section>
+	</main>
+
+	<section class="contact">
+		<div class="container">
+			<div class="contact__body">
+				<div class="contact__title-block">
+					<h1 class="contact__title subtitle">Subscribe Our Fitness Articles</h1>
+					<p class="contact__text">
+						Physical activity is defined as any bodily movement produced by 
+						skeletal muscles that results in energy expenditure
+					</p>
+				</div>
+				<div class="contact__form-block">
+					<form class="contact__form">
+						<div class="contact__input-block">
+							<input type="email" class="contact__email" placeholder="Type Your Email Address">
+							<button class="contact__btn">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__body">
+				<div class="footer__contact">
+					<a href="#" class="footer__logo">
+						<img src="img/logo.svg" alt="Gym" class="footer__logo-img">
+						<span class="footer__logo-text">Golds Gym</span>
+					</a>
+					<p class="footer__contact-text">
+						A Modified Fitness Club that Provide fitness & nutrition related
+						services to improve your health
+					</p>
+					<div class="footer__icon-links">
+						<span class="footer__icon icon-face"></span>
+						<span class="footer__icon icon-twit"></span>
+						<span class="footer__icon icon-goog"></span>
+						<span class="footer__icon icon-in"></span>
+					</div>
+				</div>
+				<ul class="footer__list">
+					<li class="footer__item">
+						<a href="#" class="footer__link footer__link--sub">Resources</a>
+						<div class="footer__links-block">
+							<a href="#" class="footer__links">Features</a>
+							<a href="#" class="footer__links">Pricing</a>
+							<a href="#" class="footer__links">Activity</a>
+							<a href="#" class="footer__links">Instructors</a>
+						</div>
+					</li>
+
+					<li class="footer__item">
+						<a href="#" class="footer__link footer__link--sub">About</a>
+						<div class="footer__links-block">
+							<a href="#" class="footer__links">Blog</a>
+							<a href="#" class="footer__links">FAQs</a>
+							<a href="#" class="footer__links">Policy</a>
+							<a href="#" class="footer__links">Contact</a>
+						</div>
+					</li>
+
+					<li class="footer__item">
+						<a href="#" class="footer__link footer__link--sub">Helpful Links</a>
+						<div class="footer__links-block">
+							<a href="#" class="footer__links">Articles</a>
+							<a href="#" class="footer__links">Nutritions</a>
+							<a href="#" class="footer__links">Meditation</a>
+							<a href="#" class="footer__links">Services</a>
+						</div>
+					</li>
+				</ul>
+				<div class="footer__text-block">
+					<p class="footer__text">
+						Created with <img src="img/hear.svg" alt="heart" class="footer__text-hear"> 
+						by Sajib Das Supriyo for Twinkle Creative. All rights reserved
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 	<script src="js/jQuery.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

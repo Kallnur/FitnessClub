@@ -1,5 +1,7 @@
 .descrip
     position: relative
+    +kvad1($rig: 0, $top: 390px)
+    +kvad2($rig: 35px, $top: 460px)
     &__list
         position: relative
         padding: 0
@@ -16,6 +18,12 @@
         position: relative
         width: 50%
         border-bottom-right-radius: 17%
+        &--orig
+            +poin($top: -90px, $left: -42px)
+        &--reap
+            border-bottom-right-radius: 0
+            border-top-left-radius: 17%
+            +poin($top: none,$rig: -42px,$bot: 15px,$left:none)
     
     &__img
         width: 100%
@@ -25,19 +33,23 @@
         box-sizing: border-box
         width: 50%
         text-align: left
-        padding: 7rem 0 8rem 5.8rem
+        padding: 3rem 0 0 5.5rem
         display: flex
         flex-direction: column
         justify-content: space-evenly
+        height: 80%
+        &--reap
+            padding: 4rem 5.5rem 0 0
+
 
     &__subtitle
         margin: 0 0 1.7rem 0
 
     &__info-text
         color: $secColor
-        line-height: 33px
-        font-size: $fs5
-        margin: 0 0 3rem 0
+        line-height: 29px
+        font-size: $fs5v
+        margin: 0 0 2rem 0
         +aleg(400)
 
     &__btn

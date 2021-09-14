@@ -1,0 +1,60 @@
+.contact
+	position: relative
+	padding-top: 7rem
+	padding-bottom: 11rem
+	+kvad1($top: 112px, $left: 0)
+	+kvad2($top: 180px, $left: 35px)
+
+	&__body
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 65%
+		margin: 0 auto
+		margin-top: 2rem
+		text-align: center
+
+	&__title
+		margin-bottom: 1rem
+
+	&__text
+		+aleg(400)
+		color: $secColor
+		width: 90%
+		margin: 0 auto
+		font-size: $fs6
+
+	&__form-block
+		position: relative
+		width: 90%
+		margin-top: 3rem
+
+	&__input-block
+		width: 90%
+		height: 43px
+		padding: .5rem 0 .5rem 1.5rem
+		background: $whiteColor
+		border-radius: 25px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		box-shadow: 0 25px 60px rgba($glavColor, .145)
+
+	&__email
+		border: none
+		height: 100%
+		width: 70%
+		font-size: $fs7
+		+aleg(400)
+
+	&__btn
+		border: none
+		height: 100%
+		padding: .5rem 0
+		width: 27.5%
+		border-radius: 30px
+		background: $glavColor
+		color: $whiteColor
+		font-size: $fs6
+		cursor: pointer
+		+jose(700)

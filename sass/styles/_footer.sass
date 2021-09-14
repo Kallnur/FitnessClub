@@ -1,0 +1,102 @@
+.footer
+	position: relative
+	background: $footBg
+	padding-top: 3.5rem
+	padding-bottom: 4.5rem
+
+	&__body
+		display: flex
+		justify-content: space-between
+
+	&__contact
+		width: 25%
+
+	&__logo
+		color: $textColor
+		font-size: $fs3
+		display: flex
+		align-items: flex-end
+		gap: .5rem
+		font-family: Abril Fatface
+		font-style: italic
+
+	&__logo-img
+		width: 43px
+
+	&__contact-text
+		color: $secColor
+		margin: 1.8rem 0 1rem 0
+		font-size: $fs7
+		line-height: 23px
+		letter-spacing: .1px
+		+aleg(400)
+
+	&__icon-links
+		display: flex
+		justify-content: space-between
+		width: 72%
+
+	&__icon
+		position: relative
+		padding: 8px 10px
+		background: $whiteColor
+		border-radius: 50%
+		transition: .2s
+		cursor: pointer
+		&:before
+			color: $glavColor
+		&:hover
+			background: $glavColor
+		&:hover::before
+			color: $whiteColor
+
+	&__list
+		width: 50%
+		box-sizing: border-box
+		list-style: none
+		display: flex
+		justify-content: space-between
+
+	&__item
+		text-align: left
+		display: flex
+		flex-direction: column
+		gap: 1.7rem
+		+aleg(400)
+
+	&__link
+		font-size: $fs5
+		color: $textColor
+
+	&__link--sub
+		+jose(600)
+
+	&__links-block
+		display: flex
+		flex-direction: column
+		gap: .8rem
+
+	&__links
+		color: $secColor
+
+	&__text-block
+		position: absolute
+		bottom: 1.7rem
+		text-align: center
+		left: 50%
+		transform: translateX(-50%)
+
+	&__text
+		margin-bottom: 0
+		color: #A69B9B
+		font-size: $fs7
+		font-family: Circular Std
+
+	&__text-hear
+		display: inline-block
+		width: 10px
+
+
+.redline::before
+	left: 0
+	width: 100%

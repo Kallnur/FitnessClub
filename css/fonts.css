@@ -85,7 +85,7 @@
 }
 .icon-twit:before {
   content: "\e90e";
-  color: #fff;
+  color: #ff2625;
 }
 
 /*------------------------------------*/
@@ -118,7 +118,7 @@
 }
 
 @font-face {
-    font-family: 'Circular Std Book';
+    font-family: 'Circular Std';
     src: url('../fonts/Circular Std/CircularStd-Book.woff2') format('woff2'),
         url('../fonts/Circular Std/CircularStd-Book.woff') format('woff');
     font-weight: 500;
